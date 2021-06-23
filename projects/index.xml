@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Introduction</title>
+    <link>/projects/</link>
+    <description>Recent content in Projects on Introduction</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Jun 2021 10:37:32 +0200</lastBuildDate>
+    
+	<atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1985 Selected Cars and Trucks Data Visualization</title>
+      <link>/projects/flourish-dataviz/</link>
+      <pubDate>Thu, 10 Jun 2021 18:11:59 +0200</pubDate>
+      
+      <guid>/projects/flourish-dataviz/</guid>
+      <description>How to visualize data quickly and effectively? In this data visualization project I draw a very easy but effective data presentation, aiming to present the main characteristics of 1985 selected cars and trucks. The same approach can be used to analyze customer characteristics or compare store branches, for example.
+Here you can know more about this project!</description>
+    </item>
+    
+    <item>
+      <title>Top Drivers of Bike Sharing Demand in Seoul</title>
+      <link>/projects/seoul-bike-demand/</link>
+      <pubDate>Thu, 10 Jun 2021 18:11:59 +0200</pubDate>
+      
+      <guid>/projects/seoul-bike-demand/</guid>
+      <description>How to maintain a reliable supply of bikes regardless of changes in demand? In this project I build a highly interpretable model to predict the demand for bikes, as well as understand the main attributes responsible for its fluctuation. The same approach can be used to maximize product inventory levels or to predict the right amount of attendants in a store on a given day or period, for example.
+Here you can know more about this project!</description>
+    </item>
+    
+  </channel>
+</rss>

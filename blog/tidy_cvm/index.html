@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Caio&#39;s website">
+<title>
+Applying Tidy Data From Scratch to Financial Statements - Introduction
+</title>
+
+
+
+        
+        <meta property="og:title" content="Applying Tidy Data from scratch to financial statements - Introduction" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Caio&#39;s website"/>
+<meta property="og:url" content="/blog/tidy_cvm/"/>
+<meta property="og:site_name" content="Introduction"/>
+
+
+
+
+<meta property="og:image" content="/home/profile.jpg"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/img/fav.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.163a51aa88841b0deb821edb77d7adf9a48d7695b86514882314d99256e763e8.css" integrity="sha256-FjpRqoiEGw3rgh7bd9et&#43;aSNdpW4ZRSIIxTZklbnY&#43;g=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero  fade-in one ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section  fade-in two ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">main</a>
+            
+
+            
+            
+
+            
+                
+            
+
+            
+                
+            
+
+            
+            
+            
+            
+            
+            <a class="navbar-item" href="/#about">About</a>
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="/projects/">
+                  
+                  
+                  Projects
+                  
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="/blog/">
+                  
+                  Back to Blog
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+
+            
+            
+            <a class="navbar-item" href="/#contact">Contact</a>
+            
+            
+
+            
+
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="/blog/tidy_cvm/">Applying Tidy Data from scratch to financial statements</a>
+    </h2>
+    <div class="post-data">
+        Jun 10, 2021 |
+        9 minutes read
+    </div>
+    
+    <div class="blog-share">
+        Share this:
+        
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Applying%20Tidy%20Data%20from%20scratch%20to%20financial%20statements%20%2fblog%2ftidy_cvm%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fab fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+        
+        
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fblog%2ftidy_cvm%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fab fa-facebook-f"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+        
+        
+        <a class="icon-pinterest" href="http://pinterest.com/pin/create/button/?url=%2fblog%2ftidy_cvm%2f&amp;description=Applying%20Tidy%20Data%20from%20scratch%20to%20financial%20statements" onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+            <i class="fab fa-pinterest-p"></i>
+            <span class="hidden">Pinterest</span>
+        </a>
+        
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <h1 id="applying-tidy-data-from-scratch-to-financial-statements">Applying Tidy Data from scratch to financial statements</h1>
+<h2 id="introduction">Introduction</h2>
+<p>It might be counter-intuitive, and financial practitioners can be shocked, but the best way to deal with a large amount of financial statements is pivoting them around the date. The aim here is to put you in touch with the Tidy Data framework. Applying it with Python to the Financial Statements of publicly traded Brazilian companies, I&rsquo;ll show you why this approach saves time and effort and should be used to prepare data for analysis.</p>
+<p>The Tidy Data Framework was formulated by <a href="https://www.jstatsoft.org/article/view/v059i10">Wickham</a> one of the exponents in the R&rsquo;s world, but his concept is suitable for any type of programming language applied to data analysis. Keep in mind that when we talk about Tidy Data we need rectangular shaped datasets or relational datasets, each rectangular as well. As far as I know, this is how most of the data are available in the wild.</p>
+<p>Tidy datasets aren&rsquo;t the best way to store data, present data, nor efficient for computing operations. So, why should I bother with it?</p>
+<p>Cleaning and preparing data for analysis takes time. Indeed it&rsquo;s sometimes a daunting task, so a standard way of doing part of it is definitely welcome.  In addition, most of the tools to explore, visualize and modelling are input-tidy, basically because tidy datasets are similars, whether we&rsquo;re looking for economics or chemicals data.</p>
+<p>So, what is a tidy dataset?</p>
+<h3 id="the-basic-struture-of-tidy-datasets">The Basic Struture of Tidy Datasets</h3>
+<ul>
+<li><em>Column</em> stores a <em>variable</em></li>
+<li><em>Row</em> represents an <em>observation</em></li>
+<li><em>Table</em> aggregates <em>one type of observations</em> and their variables</li>
+</ul>
+<p>Datasets are collections of informations or values, each one belongs to an observation and a variable. Variables store informations or values that represent a specific attribute of observations. To find out where the variables are - when you bump into a dataset - they usually have a functional relationship. We can think either about measures of the same experiment or part of a whole, such as revenue and cost of revenue or length and width. Observations store all attributes of the same unit. We are usually interested in comparing observations across some variable or summarizing a group of observations.</p>
+<h2 id="the-data">The Data</h2>
+<p>All data are available on <a href="http://dados.cvm.gov.br/dados/CIA_ABERTA/">CVM</a>, but it isn&rsquo;t our aim here to show how automate this process (It could be another post&hellip;), thus we already have all required data locally. We&rsquo;ll work only with Balance Sheets and Income Statements, because they are by far the most used statements for Fundamental Analysis.</p>
+<h3 id="reading-data">Reading data</h3>
+<p>First we have to set our goals&hellip; They might be: calculate financial ratios, compare these ratios between companies throughout years, forecast next periods&hellip;  With our goals in mind, we can now find out how our tidy dataset should look.</p>
+<p><strong>Ratios represent a relationship between the items</strong> belonging to the financial statements, so <strong>they are variables</strong> that have functional relationship with other variables.</p>
+<p><strong>We can compare variables grouped whether by companies on a specific date, or a company over time</strong>. Thus, we can define an observation as a value for each financial statement item of a certain company in a specific moment.</p>
+<p><strong>The unit of observation could be the items by company over time or items by companies on a specific date.</strong></p>
+<p>Below I sketched which structure we&rsquo;d like to get.</p>
+<table>
+<thead>
+<tr>
+<th>Period</th>
+<th>Company</th>
+<th>Item 1</th>
+<th>Item 2</th>
+<th>&hellip;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t0</td>
+<td>companie A</td>
+<td>value x1</td>
+<td>value y1</td>
+<td>&hellip;</td>
+</tr>
+<tr>
+<td>t0</td>
+<td>companie B</td>
+<td>value x2</td>
+<td>value y2</td>
+<td>&hellip;</td>
+</tr>
+<tr>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+</tr>
+<tr>
+<td>tn</td>
+<td>companie Z</td>
+<td>value xn</td>
+<td>value yn</td>
+<td>&hellip;</td>
+</tr>
+</tbody>
+</table>
+<p>But we can go further. The ROIC (Return on Invested Capital), for instance, is one of the most important ratios to assess the company&rsquo;s efficiency in terms of capital allocation, but to calculate it requires items from two different financial statements. Although the difference in the origin, these items belong to the same unit of observation, I mean, each company has a value for each item in each period, regardless of whether the item comes from  the balance sheet or the income statement.</p>
+<p>To clarify the ideas, have a look at our CVM data.</p>
+<h3 id="one-type-of-observation-in-multiples-tables">One type of observation in multiples tables</h3>
+<p>The first problem we are facing with these data is: they are spread over 60 files divided by type of financial statement and period. However the datasets are structurally similar, in fact, they have the same columns that we&rsquo;re interest in. So let&rsquo;s read the files.</p>
+<pre><code>path = 'raw_data//'
+def read_files(path):
+    &quot;&quot;&quot;Create a list of files, read them and return a concatenated dataframe.&quot;&quot;&quot;    
+    import pandas as pd
+    import os
+
+    files = os.listdir(path)
+    df = (pd.read_csv(path + f, sep=';',
+                      encoding='latin-1',
+                      usecols=['DT_REFER', 'DENOM_CIA', 'ORDEM_EXERC',
+                               'CD_CVM', 'CD_CONTA', 'DS_CONTA',
+                               'VL_CONTA'], parse_dates=['DT_REFER'],
+                    infer_datetime_format=True) for f in files)
+    df = pd.concat(df).reindex()
+    return df[df.ORDEM_EXERC == 'ÚLTIMO']
+</code></pre>
+<p>This function reads a list of files from a path and creates a list of dataframes by applying a list comprehension method. Like a loop, this method takes each file, read it with read_csv function and appends it to a list. As we&rsquo;ve selected a group of columns, we get similar datasets and we can concatenate them into a single dataframe that contains all the data from our 60 files. Before returning the output we filter only the lastest version of each statement per year.</p>
+<p>Inspecting it:</p>
+<pre><code>df = read_files(path)
+df.info()
+</code></pre>
+<p>Output:</p>
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+Int64Index: 1727833 entries, 1 to 25653
+Data columns (total 7 columns):
+#   Column       Dtype         
+---  ------       -----         
+0   DT_REFER     datetime64[ns]
+1   DENOM_CIA    object        
+2   CD_CVM       int64         
+3   ORDEM_EXERC  object        
+4   CD_CONTA     object        
+5   DS_CONTA     object        
+6   VL_CONTA     float64       
+dtypes: datetime64[ns](1), float64(1), int64(1), object(4)
+memory usage: 105.5+ MB
+</code></pre>
+<h3 id="variables-are-stored-in-rows">Variables are stored in rows</h3>
+<p>After inspected our dataframe we noticed some variables are stored in rows. <strong>DT_REFER</strong> stores dates, <strong>DENOM_CIA</strong> and <strong>CD_CVM</strong> store companies names and codes, <strong>ORDEM_EXERC</strong> stores statements version number, <strong>CD_CONTA</strong> and <strong>DS_CONTA</strong> store variables, they are the codes and the names the items belonging to the statements and <strong>VL_CONTA</strong> stores their values. Therefore, our aim here is to unstack this variables into columns with their values.</p>
+<pre><code>def pivot_df(df, length=4):
+    &quot;&quot;&quot;Get the dataframe pivoted.&quot;&quot;&quot;
+    df = df[(df.CD_CONTA.str.len() &lt;= length)]
+    # Getting last layout as a model
+    cod_conta = df.loc[df.DT_REFER == max(df.DT_REFER),
+                    ['CD_CONTA']]
+    df = df[df.CD_CONTA.isin(cod_conta.CD_CONTA)]
+    df_pivoted = df.pivot_table(index=['DT_REFER', 'CD_CVM'], columns=['CD_CONTA'],
+                                values=['VL_CONTA'])
+    df_pivoted.columns = df_pivoted.columns.droplevel()
+    return df_pivoted.dropna(axis=1, how='all')
+</code></pre>
+<p>This function has two inputs, dataframe and length. Length is an item aggregation parameter (I&rsquo;ll explain later). It sets the last layout as a model and than pivot the dataframe with date, company code and items as variables.</p>
+<p>Inspecting  it:</p>
+<pre><code>df_pivoted = pivot_df(df, length=4)
+df_pivoted.info()
+</code></pre>
+<p>Output:</p>
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+MultiIndex: 6379 entries, (Timestamp('2010-12-31 00:00:00'), 94) to (Timestamp('2019-12-31 00:00:00'), 80179)
+Data columns (total 30 columns):
+#   Column  Non-Null Count  Dtype  
+---  ------  --------------  -----  
+0   1       6379 non-null   float64
+1   1.01    6379 non-null   float64
+2   1.02    6379 non-null   float64
+3   1.03    414 non-null    float64
+4   1.04    194 non-null    float64
+5   1.05    194 non-null    float64
+6   1.06    194 non-null    float64
+7   1.07    194 non-null    float64
+8   2       6379 non-null   float64
+9   2.01    6379 non-null   float64
+10  2.02    6379 non-null   float64
+11  2.03    6379 non-null   float64
+12  2.04    194 non-null    float64
+13  2.05    414 non-null    float64
+14  2.06    194 non-null    float64
+15  2.07    194 non-null    float64
+16  2.08    194 non-null    float64
+17  3.01    6372 non-null   float64
+18  3.02    6372 non-null   float64
+19  3.03    6372 non-null   float64
+20  3.04    6372 non-null   float64
+21  3.05    6372 non-null   float64
+22  3.06    6372 non-null   float64
+23  3.07    6372 non-null   float64
+24  3.08    6372 non-null   float64
+25  3.09    6372 non-null   float64
+26  3.10    6356 non-null   float64
+27  3.11    6356 non-null   float64
+28  3.12    23 non-null     float64
+29  3.13    420 non-null    float64
+dtypes: float64(30)
+memory usage: 1.5 MB
+</code></pre>
+<p>You may have noticed the meaning of the item aggregation parameter. It is just items and sub-items of financial statements. In this example The Column 1 are the &ldquo;Assets&rdquo; and The Column 1.01 are &ldquo;Current Assets&rdquo;.</p>
+<pre><code>def cod_items(df, length=4):
+    df = df[(df.CD_CONTA.str.len() &lt;= length)]
+    return df[['CD_CONTA',
+            'DS_CONTA']].set_index('CD_CONTA')['DS_CONTA'].sort_index().to_dict()
+</code></pre>
+<p>This function filters dataframe by the length of the items code and returns a dictionary with the name and code of these items. And we can do almost the same with companies names.</p>
+<pre><code>def cod_names():
+return df[['CD_CVM',
+           'DENOM_CIA']].set_index('CD_CVM')['DENOM_CIA'].sort_index().to_dict()
+
+cod_items(df, length=4)
+</code></pre>
+<p>Output:</p>
+<pre><code>{'1': 'Ativo Total',
+'1.01': 'Ativo Circulante',
+'1.02': 'Ativo Não Circulante',
+'1.03': 'Ativo Permanente',
+'1.04': 'Tributos Diferidos',
+'1.05': 'Outros Ativos',
+'1.06': 'Investimentos',
+'1.07': 'Imobilizado',
+'1.08': 'Intangível',
+'2': 'Passivo Total',
+'2.01': 'Passivo Circulante',
+'2.02': 'Passivo Não Circulante',
+'2.03': 'Patrimônio Líquido Consolidado',
+'2.04': 'Provisões',
+'2.05': 'Passivos Fiscais',
+'2.06': 'Outros Passivos',
+'2.07': 'Passivos sobre Ativos Não Correntes a Venda e Descontinuados',
+'2.08': 'Patrimônio Líquido Consolidado',
+'3.01': 'Receita de Venda de Bens e/ou Serviços',
+'3.02': 'Custo dos Bens e/ou Serviços Vendidos',
+'3.03': 'Resultado Bruto',
+'3.04': 'Despesas/Receitas Operacionais',
+'3.05': 'Resultado Antes do Resultado Financeiro e dos Tributos',
+'3.06': 'Resultado Financeiro',
+'3.07': 'Resultado Antes dos Tributos sobre o Lucro',
+'3.08': 'Provisão para IR e Contribuição Social',
+'3.09': 'Resultado Líquido das Operações Continuadas',
+'3.10': 'Resultado Líquido de Operações Descontinuadas',
+'3.11': 'Reversão dos Juros sobre Capital Próprio',
+'3.12': 'Resultado Líquido de Operações Descontinuadas',
+'3.13': 'Lucro/Prejuízo do Período'}
+</code></pre>
+<h3 id="multiple-types-in-one-table">Multiple types in one table</h3>
+<p>After pivoting our dataframe a new parameters appeared: a MultiIndex. Unlike the standard Tidy Data framework - that supports one table to each unit of observation and relational datasets are required to deal with more than one unit of observation, the MultiIndex is the tidy way For Pandas to handle multiples types in one dataframe.</p>
+<p>I would like to explore this concept further, but in brief, this principle is named data normalization and it&rsquo;s useful for tidying and eliminating inconsistencies. However, there are few tools for working with relational datasets and analyzes are usually done with denormalized datasets.</p>
+<p>By the end of the day we have a dataframe like this one:</p>
+<pre><code>print(df_pivoted.sample(20).iloc[:,0:5])
+</code></pre>
+<p>Output:</p>
+<pre><code>CD_CONTA                     1        1.01         1.02
+DT_REFER   CD_CVM                                      
+2011-12-31 5983        25784.0      3107.5      22676.5
+2016-12-31 14613       17600.0        37.0      17563.0
+2012-12-31 22390         101.0       101.0          0.0
+2013-12-31 20524     3851074.5   1744848.0    2106226.5
+2010-12-31 2909       522417.0    286444.5     235972.5
+2016-12-31 21520      822446.5     91631.0     730815.5
+2012-12-31 22934       57217.0     57217.0          0.0
+2010-12-31 20974     1257475.5    422941.0     834534.5
+        5410      5523579.0   2773280.5    2750298.5
+2011-12-31 5410      6461108.0   3225753.0    3235355.0
+2013-12-31 6343      4338218.5   1691015.0    2647203.5
+2015-12-31 22217      463843.5     55821.5     408022.0
+        2437    122404301.5  21898276.5  100506025.0
+2010-12-31 21059         273.0       273.0          0.0
+        8451      2583033.0   1651135.5     931897.5
+2014-12-31 14605     4402872.0   1368666.0    3034206.0
+2013-12-31 20451     1854207.5   1043785.5     810422.0
+2017-12-31 23531    36287877.5   4055277.0   32232600.5
+2015-12-31 8451      4402756.0   2490593.5    1912162.5
+2018-12-31 21997     2863113.0     40363.0    2822750.0
+</code></pre>
+<p>Each row represents the financial statements of a company on a specific date. We can subset rows to compare companies or apply functions like groupby. On the other hand we could also create new columns to calculate ratios for all companies as easily as that:</p>
+<pre><code>df_pivoted['Current_Ratio'] = df_pivoted['1.01']/df_pivoted['2.01']
+df_pivoted['Current_Ratio']
+</code></pre>
+<p>Output:</p>
+<pre><code>DT_REFER    CD_CVM
+2010-12-31  94        2.366105
+            140       1.679680
+            701       5.773780
+            906       1.261044
+            922       0.762841
+                        ...   
+2019-12-31  24880     1.054207
+            80020     8.745793
+            80047     1.491686
+            80152          NaN
+            80179     1.355918
+Length: 6379, dtype: float64
+</code></pre>
+<p>I hope you enjoyed it and find out how to apply this framework in your own analysis as well.</p>
+
+</div>
+
+
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><!-- raw HTML omitted --><!-- raw HTML omitted --> and <!-- raw HTML omitted --><!-- raw HTML omitted --></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>
