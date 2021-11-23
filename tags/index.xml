@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Caio Mescouto</title>
-    <link>https://example.com/tags/</link>
+    <link>https://caiomts.github.io/tags/</link>
     <description>Recent content in Tags on Caio Mescouto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 21 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://caiomts.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Machine Learning</title>
-      <link>https://example.com/tags/machine-learning/</link>
+      <link>https://caiomts.github.io/tags/machine-learning/</link>
       <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/machine-learning/</guid>
+      <guid>https://caiomts.github.io/tags/machine-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>https://example.com/tags/python/</link>
+      <link>https://caiomts.github.io/tags/python/</link>
       <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/python/</guid>
+      <guid>https://caiomts.github.io/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scikit-learn</title>
-      <link>https://example.com/tags/scikit-learn/</link>
+      <link>https://caiomts.github.io/tags/scikit-learn/</link>
       <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/scikit-learn/</guid>
+      <guid>https://caiomts.github.io/tags/scikit-learn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pandas</title>
-      <link>https://example.com/tags/pandas/</link>
+      <link>https://caiomts.github.io/tags/pandas/</link>
       <pubDate>Thu, 10 Jun 2021 00:00:00 +0200</pubDate>
       
-      <guid>https://example.com/tags/pandas/</guid>
+      <guid>https://caiomts.github.io/tags/pandas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tidy Data</title>
-      <link>https://example.com/tags/tidy-data/</link>
+      <link>https://caiomts.github.io/tags/tidy-data/</link>
       <pubDate>Thu, 10 Jun 2021 00:00:00 +0200</pubDate>
       
-      <guid>https://example.com/tags/tidy-data/</guid>
+      <guid>https://caiomts.github.io/tags/tidy-data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>projects</title>
-      <link>https://example.com/tags/projects/</link>
+      <link>https://caiomts.github.io/tags/projects/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
-      <guid>https://example.com/tags/projects/</guid>
+      <guid>https://caiomts.github.io/tags/projects/</guid>
       <description></description>
     </item>
     
