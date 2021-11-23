@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scikit-learn on Caio Mescouto</title>
+    <link>https://example.com/tags/scikit-learn/</link>
+    <description>Recent content in Scikit-learn on Caio Mescouto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 21 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/scikit-learn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to use Scikit-learn Pipeline to train different models at once</title>
+      <link>https://example.com/blog/sk-learn_pipeline/</link>
+      <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/blog/sk-learn_pipeline/</guid>
+      <description>How to use Scikit-learn Pipeline to train different models at once I spent some time understanding how to properly use Pipeline in Scikit-Learn but the most examples I bumped into and the path I followed was focused on using it to wrap up some data pre-processing and feature engineering. Even though it is handy, I always had been stuck in the process of short-listing promising models - I strongly recommend that you check out the ml project checklist proposed by Aurélien Géron -, having to run each model in different tries.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Caio Mescouto">
+    <link rel="shortcut icon" type="image/x-icon" href="https://example.com/img/favicon.ico">
+    <title>How to use Scikit-learn Pipeline to train different models at once | Caio Mescouto</title>
+    <meta name="description" content="How to automate the process of short-listing promising ML models">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+    <link rel="preload stylesheet" href="/css/main.min.css" as="style">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old">
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <div id="content">
+  
+  <div class="container mb-3">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://example.com/">
+        <i class="fa fa-home"></i>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          
+            
+              <li class="nav-item">
+                <li><a class="nav-link" href="/about/">ABOUT</a></li>
+              </li>
+            
+              <li class="nav-item">
+                <li><a class="nav-link" href="/blog/">BLOG</a></li>
+              </li>
+            
+              <li class="nav-item">
+                <li><a class="nav-link" href="/projects/">PROJECTS</a></li>
+              </li>
+            
+              <li class="nav-item">
+                <li><a class="nav-link" href="https://raw.githubusercontent.com/caiomts/caiomts.github.io/master/caio_mescouto__cv.site.pdf">RESUME</a></li>
+              </li>
+            
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="container">
+    <h3 class="mt-3"><b><a href="https://example.com/blog/sk-learn_pipeline/">How to use Scikit-learn Pipeline to train different models at once</a></b></h3>
+    <div class="blog-title my-4">
+      <h6>
+        July 21, 2021
+        &nbsp;&nbsp;
+        
+          <span class="badge bg-success">Python</span>
+        
+          <span class="badge bg-success">Scikit-learn</span>
+        
+          <span class="badge bg-success">Machine Learning</span>
+        
+      </h6>
+    </div>
+    <div class="panel">
+      <div class="panel-body">
+        <div class="blogpost">
+          <h1 id="how-to-use-scikit-learn-pipeline-to-train-different-models-at-once">How to use Scikit-learn Pipeline to train different models at once</h1>
+<p>I spent some time understanding how to properly use <code>Pipeline</code> in Scikit-Learn but the most examples I bumped into and the path I followed was focused on using it to wrap up some data pre-processing and feature engineering. Even though it is handy, I always had been stuck in the process of short-listing promising models - I strongly recommend that you check out the ml project checklist proposed by <a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/">Aurélien Géron</a> -, having to run each model in different tries.</p>
+<h2 id="the-game-changing">The game changing</h2>
+<p>The solution relies on the <em>OOP</em> Scikit-Learn design, because we can use <a href="https://scikit-learn.org/stable/modules/generated/sklearn.base.BaseEstimator.html?highlight=baseestimator#sklearn.base.BaseEstimator">&ldquo;Base class for all estimators in scikit-learn&rdquo;</a> to create a generic estimator and put it into the <code>Pipeline</code> and then use the <code>parameters</code> in <code>GridSearchCV</code> or <code>RandomizedSearchCV</code>.  Let’s get our hands dirty and see how to handle that <em>Base class</em>.</p>
+<pre><code>    class ClfSwitcher(BaseEstimator):
+            &quot;&quot;&quot;
+            Custom BaseEstimator to switch between classifiers.
+            :param estimator: sklearn object.
+            &quot;&quot;&quot;
+            def __init__(self, estimator=SGDClassifier()):
+                    self.estimator = estimator
+
+            def fit(self, X, y=None, **kwargs):
+                    self.estimator.fit(X, y)
+                    return self
+
+            def predict(self, X, y=None):
+                    return self.estimator.predict(X)
+
+            def predict_proba(self, X):
+                    return self.estimator.predict_proba(X)
+
+            def score(self, X, y):
+                    return self.estimator.score(X, y)
+
+            def decision_function(self, X):
+                    return self.estimator.decision_function(X)
+</code></pre>
+<p><strong>Notes:</strong></p>
+<ol>
+<li>You can set whatever estimator you want as default;</li>
+<li>You must define all methods you want to use in your training and evaluation process. As I was using some models with <code>decision_function</code> and others with <code>predict_proba</code> I set up both.</li>
+</ol>
+<h2 id="piping-the-estimator">Piping the estimator</h2>
+<p>The next step is to pipe the <em>base estimator</em> with all the data pre-processing and feature engineering into a <code>Pipeline</code>. In my case I was working in a NLP model, so all the pre-processing was done in a function. The only built-in Scikit-Learn transformation I used was the <code>TfidfTransformer()</code>, but you can plug all transformations whatever you want, the only concern is that the last step must be, of course, the estimator.</p>
+<pre><code>    piped_estimator = Pipeline([
+            ('vect', CountVectorizer(preprocessor=normalization_text, stop_words=stop_word)),
+            ('tfidf', TfidfTransformer()),
+            ('clf', ClfSwitcher()),
+    ])
+</code></pre>
+<h2 id="parameters">Parameters</h2>
+<p>Now is the moment for you to set up all models you have short-listed before. You can have as many models as you want as well as the hyperparameters for each one.
+parameters = [
+{
+&lsquo;clf__estimator&rsquo;: [SGDClassifier(random_state=42)],
+&lsquo;vect__max_df&rsquo;: (0.3, 0.5, 0.75, 1.0),
+&lsquo;tfidf__use_idf&rsquo;: [True, False],
+&lsquo;clf__estimator__penalty&rsquo;: (&lsquo;l2&rsquo;, &lsquo;elasticnet&rsquo;, &lsquo;l1&rsquo;),
+&lsquo;clf__estimator__early_stopping&rsquo; :[True, False],
+&lsquo;clf__estimator__alpha&rsquo;: [1e-4, 1e-3, 1e-2],
+&lsquo;clf__estimator__max_iter&rsquo;: [50, 100, 200, 1000],
+&lsquo;clf__estimator__tol&rsquo;: [1e-4],
+&lsquo;clf__estimator__loss&rsquo;: [&lsquo;hinge&rsquo;, &lsquo;log&rsquo;, &lsquo;squared_hinge&rsquo;],
+},
+{
+&lsquo;clf__estimator&rsquo;: [MultinomialNB()],
+&lsquo;vect__max_df&rsquo;: (0.3, 0.5, 0.75, 1.0),
+&lsquo;tfidf__use_idf&rsquo;: [True, False],
+&lsquo;clf__estimator__alpha&rsquo;: (1e-2, 1e-3, 1e-1),
+},
+{
+&lsquo;clf__estimator&rsquo;: [BernoulliNB(binarize=None)],
+&lsquo;vect__max_df&rsquo;: (0.3, 0.5, 0.75, 1.0),
+&lsquo;vect__binary&rsquo;: [True],
+&lsquo;clf__estimator__alpha&rsquo;: (1e-2, 1e-3, 1e-1),
+},
+&hellip;
+]</p>
+<p><strong>Notes:</strong></p>
+<p>Each dictionary has parameters for the pipeline and hyperparameters for a model. Keep an eye on the keys. <code>’'Clf__estimator'’</code> is the key used to select the model, but to define the hyperparameters we use this key + the name of the hyperparameter.</p>
+<h2 id="searchcv">SearchCV</h2>
+<p>Finally, we can use our pipeline and the parameters to find the best estimator for our problem. We should use <a href="https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation">cross-validation</a> to train and tune estimators because it&rsquo;s a good way, among other advantages, to avoid overfitting. Scikit-Learn provides two main alternatives for applying it, <code>GridSearchCV()</code> and <code>RandomizedSearchCV()</code>. Briefly speaking, The first one is an exhaustive search, which tries all possible combinations between the <em>parameters</em>. It’s suitable when you are familiar with the hyperparameters and are trying to fine-tune them. The second one, as the name suggested, randomly tries the amount of runs you define. There is also a <a href="https://scikit-learn.org/stable/modules/grid_search.html#exhaustive-grid-search">Successive halving for both of them</a> that is suitable for big datasets.</p>
+<pre><code>    rscv = RandomizedSearchCV(piped_estimator, parameters, n_iter=50, cv=5, n_jobs=-1,
+                                            return_train_score=True, verbose=4, scoring=f_1_inv, random_state=42)
+</code></pre>
+<p>I&rsquo;m not going to delve into parameters because cross-validation and SearchCV are not my topic today, I&rsquo;m just pointing out that <code>piped_estimator</code> goes like <code>estimator</code> and <code>parameters</code> goes like <code>param_distributions</code> .  That&rsquo;s it for today, now you can fit and evaluate the model through <code>rscv</code> and finding the best one!</p>
+
+          
+          
+            <div class="related-posts mt-4 py-3">
+              <h5>Related Posts</h5>
+              
+                <div class="row">
+                  <div class="col-4">
+                    <h6 style="text-align: right">
+                      June 10, 2021
+                    </h6>
+                  </div>
+                  <div class="col-8">
+                    <h6 style="text-align: left">
+                      <b><a href="/blog/tidy_cvm/">Applying Tidy Data from scratch to financial statements</a></b>
+                    </h6>
+                  </div>
+                </div>
+              
+            </div>
+          
+        </div>
+      </div>
+      <div class="disqus">
+        
+      </div>
+    </div>
+  </div>
+
+    </div>
+    
+    <footer class="footer">
+  <div class="container">
+    <div class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
+    <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+
+  </body>
+</html>

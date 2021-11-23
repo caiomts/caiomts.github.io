@@ -2,68 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Caio Mescouto</title>
-    <link>/projects/</link>
+    <link>https://example.com/projects/</link>
     <description>Recent content in Projects on Caio Mescouto</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 10 Jun 2021 10:37:32 +0200</lastBuildDate>
-    
-	<atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Top Drivers of Bike Sharing Demand in Seoul</title>
-      <link>/projects/seoul-bike-demand/</link>
-      <pubDate>Thu, 10 Jun 2021 18:11:59 +0200</pubDate>
-      
-      <guid>/projects/seoul-bike-demand/</guid>
-      <description>How to maintain a reliable supply of bikes regardless of changes in demand? In this project I build a highly interpretable model to predict the demand for bikes, as well as understand the main attributes responsible for its fluctuation.
-Keywords: Python, Machine Learning, Supervised Learning, Regression, Pandas, Numpy, Scikit-Learn, matplotlib, seaborn, deployed with github-pages.
-Here you can see more about this project!</description>
-    </item>
-    
-    <item>
-      <title>Credible or not Credible Clients - Default of Credit Card</title>
-      <link>/projects/default-credit-card/</link>
-      <pubDate>Wed, 11 Aug 2021 07:08:59 +0200</pubDate>
-      
-      <guid>/projects/default-credit-card/</guid>
-      <description>Credible or not Credible Clients - Default of Credit Card In this project I build a model to predict whether clients default on credit card or not. But I used DVC, CML and GitHub Actions to build a reproducible machine learning pipeline.
-Keywords: Python, Machine Learning, Supervised Learning, Classification, Pandas, Numpy, Scikit-Learn, DVC, GitHub Actions, deployed with github-pages.
-Here you can see more about this project!</description>
-    </item>
-    
-    <item>
-      <title>Financial Complaints</title>
-      <link>/projects/financial_complaints/</link>
-      <pubDate>Fri, 02 Apr 2021 11:13:29 +0200</pubDate>
-      
-      <guid>/projects/financial_complaints/</guid>
-      <description>Insights on Financial Complaints In this project I performed a simple Exploratory Data Analysis. I was looking to provide insights for an imaginary company that handles customer complaints and offers its services to companies in the financial sector. Technically speaking, I used the Google BigQuery API to consume the data and deployed a simple interactive report with Streamlit and Heroku.
-Keywords: Python, EDA, SQL, Google BigQuery, Pandas, Numpy, matplotlib, Plotly, deployed with Streamlit and Heroku.</description>
-    </item>
-    
-    <item>
-      <title>Analyzing Supermarket sales</title>
-      <link>/projects/market-eda/</link>
-      <pubDate>Fri, 02 Apr 2021 11:13:29 +0200</pubDate>
-      
-      <guid>/projects/market-eda/</guid>
-      <description>Analyzing Supermarket sales In this project, I performed a simple Exploratory Data Analysis to understand the difference in sales between three branches of the same supermarket. I raised three hypotheses and performed a non-parametric Mann-Whitney test to confirm my hypothesis, as I was working on non-normal distributions.
-Keywords: Python, EDA, Ipynb, Pandas, Numpy, matplotlib, seaborn.
-Here you can see the full report and here the repository.</description>
-    </item>
-    
-    <item>
-      <title>1985 Selected Cars and Trucks Data Visualization</title>
-      <link>/projects/flourish-dataviz/</link>
-      <pubDate>Thu, 10 Jun 2021 18:11:59 +0200</pubDate>
-      
-      <guid>/projects/flourish-dataviz/</guid>
-      <description>How to visualize data quickly and effectively? In this data visualization project I draw a very easy but effective data presentation, aiming to present the main characteristics of 1985 selected cars and trucks.
-Keywords: Data Visualization, Flourish, EDA.
-Here you can see more about this project!</description>
-    </item>
-    
+    <language>en-US</language>
+    <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate><atom:link href="https://example.com/projects/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

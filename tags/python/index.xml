@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Caio Mescouto</title>
-    <link>https://example.com/</link>
-    <description>Recent content on Caio Mescouto</description>
+    <title>Python on Caio Mescouto</title>
+    <link>https://example.com/tags/python/</link>
+    <description>Recent content in Python on Caio Mescouto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 21 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About Me</title>
-      <link>https://example.com/about/</link>
-      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/about/</guid>
-      <description>Hi There!
-I’m Caio and I’m passionate about open source projects, programming, data science and machine learning. But I also love camping, traveling, running, cycling, reading and hanging out with friends and learning about other cultures.
-About three year ago I decided to change my career. I got a sabbatical year, moved abroad and started to learn another language. A bit after these changes I finally dive into data science and programming - I’d had contact with it before, but never had time to really invest in it.</description>
-    </item>
-    
+    <lastBuildDate>Wed, 21 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to use Scikit-learn Pipeline to train different models at once</title>
       <link>https://example.com/blog/sk-learn_pipeline/</link>
