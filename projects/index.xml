@@ -6,6 +6,10 @@
     <description>Recent content in Projects on Caio Mescouto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate><atom:link href="https://caiomts.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate>
+    
+	<atom:link href="https://caiomts.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>

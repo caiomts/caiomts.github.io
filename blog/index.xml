@@ -1,29 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on Caio Mescouto</title>
+    <title>Caio Mescouto</title>
     <link>https://caiomts.github.io/blog/</link>
-    <description>Recent content in Blogs on Caio Mescouto</description>
+    <description>Recent content on Caio Mescouto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 21 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://caiomts.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>How to use Scikit-learn Pipeline to train different models at once</title>
-      <link>https://caiomts.github.io/blog/sk-learn_pipeline/</link>
-      <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://caiomts.github.io/blog/sk-learn_pipeline/</guid>
-      <description>How to use Scikit-learn Pipeline to train different models at once I spent some time understanding how to properly use Pipeline in Scikit-Learn but the most examples I bumped into and the path I followed was focused on using it to wrap up some data pre-processing and feature engineering. Even though it is handy, I always had been stuck in the process of short-listing promising models - I strongly recommend that you check out the ml project checklist proposed by Aurélien Géron -, having to run each model in different tries.</description>
-    </item>
     
-    <item>
-      <title>Applying Tidy Data from scratch to financial statements</title>
-      <link>https://caiomts.github.io/blog/tidy_cvm/</link>
-      <pubDate>Thu, 10 Jun 2021 00:00:00 +0200</pubDate>
-      
-      <guid>https://caiomts.github.io/blog/tidy_cvm/</guid>
-      <description>Applying Tidy Data from scratch to financial statements Introduction It might be counter-intuitive, and financial practitioners can be shocked, but the best way to deal with a large amount of financial statements is pivoting them around the date. The aim here is to put you in touch with the Tidy Data framework. Applying it with Python to the Financial Statements of publicly traded Brazilian companies, I&amp;rsquo;ll show you why this approach saves time and effort and should be used to prepare data for analysis.</description>
-    </item>
+	<atom:link href="https://caiomts.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
     
   </channel>
 </rss>
