@@ -32,11 +32,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
       - name: Publish
-      - uses: actions/cache@v2
-        with:
-          key: ${{ github.ref }}
-          path: .cache
-        run: bash ./scripts/docs_publish.sh
+        run: python -m mkdocs gh-deploy --remote-branch master
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
