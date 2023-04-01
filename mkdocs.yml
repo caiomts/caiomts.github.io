@@ -1,0 +1,89 @@
+site_name: Caio's personal website
+site_url: https://caiomts.github.io/
+site_author: Caio Mescouto Terra de Souza
+
+
+repo_name: /caiomts/caiomts.github.io
+repo_url: https://github.com/caiomts/caiomts.github.io
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: lime
+      accent: deep purple
+      toggle:
+          icon: material/weather-night 
+          name: Switch to dark mode
+    - scheme: slate
+      primary: light green
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode  
+  logo: img/logo.png
+  favicon: img/logo.png
+  icon:
+    admonition:
+      example: octicons/stack-16
+  features:
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.share
+    - header.autohide
+    - navigation.footer
+    - content.action.view
+    - content.action.edit
+
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - abbr
+  - attr_list
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - footnotes
+  - pymdownx.betterem
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/caiomts
+      name: github.com/caiomts
+
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/caiomts/
+      name: in/caiomts/
+
+plugins:
+  - search
+  - tags
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+nav:
+  - Home: index.md
+  - Projects: projects.md
+  - Blog: blog.md
+  - Resume: resume.md
+
+
+extra_css:
+  - stylesheets/extra.css
