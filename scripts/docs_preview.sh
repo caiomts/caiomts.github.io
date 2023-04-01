@@ -2,7 +2,7 @@
 
 PREFIX=''
 
-[[ -d .venv ]] && PREFIX='.venv/bin/' && python -m venv .venv
+[[ -d .venv ]] && PREFIX='.venv/bin/'
 
 [[ -d docs ]] ||  ${PREFIX}python -m mkdocs new .
 

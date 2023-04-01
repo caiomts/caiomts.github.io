@@ -2,7 +2,7 @@
 
 PREFIX=''
 
-[[ -d .venv ]] && PREFIX='.venv/bin/' && python -m venv .venv
+[[ -d .venv ]] && PREFIX='.venv/bin/'
 
 ${PREFIX}python -m mkdocs gh-deploy --remote-branch master
 
