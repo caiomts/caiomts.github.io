@@ -30,12 +30,12 @@ jobs:
         run: bash ./scripts/bootstrap.sh
       - name: Setup Pages
         id: pages
+        uses: actions/configure-pages@v3
+      - name: Publish
       - uses: actions/cache@v2
         with:
           key: ${{ github.ref }}
           path: .cache
-        uses: actions/configure-pages@v3
-      - name: Publish
         run: bash ./scripts/docs_publish.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
