@@ -6,6 +6,6 @@
 
 
 <a href="https://github.com/caiomts/caiomts.github.io/actions?query=workflow%3ADeploy" target="_blank">
-    <img src="https://github.com/caiomts/caiomts.github.io/actions/workflows/Deploy/badge.svg" alt="Deploy">
+    <img src="https://github.com/caiomts/caiomts.github.io/actions/workflows/ci.yml/badge.svg" alt="Deploy">
 </a>
 
