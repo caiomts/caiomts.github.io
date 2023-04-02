@@ -68,17 +68,21 @@ hide: navigation, toc
 
 ## TECHNOLOGY STACK
 ### PROGRAMMING LANGUAGE: 
-> Python, Bash, SQL  
+- Python, Bash, SQL  
 ### PYTHON LIBRARIES AND FRAMEWORKS:
-> Pandas, Numpy, Scipy, Scikit-learn, XGBoost, Keras, Prefect, Matplotlib, Bokeh, Panel, Streamlit, FastAPI, Typer, Pytest, Black, Flake8, MkDocs  
+- Pandas, Numpy, Scipy, Scikit-learn, XGBoost, Keras, Prefect, Matplotlib, Bokeh, Panel, Streamlit, FastAPI, Typer, Pytest, Black, Flake8, MkDocs  
 ### VCS:
-> Git  
+- Git  
 ### CI/CD:
-> Docker, GitHub Actions, GNU Make  
+- Docker, GitHub Actions, GNU Make  
 
 ## GENERAL INFORMATION
 
 ### LANGUAGES SKILLS:
-> Portuguese (mother tongue), English (C1), French (B2)
+- Portuguese (mother tongue), English (C1), French (B2)
+
+---
+
+[Resume :material-file-account:](https://raw.githubusercontent.com/caiomts/caiomts.github.io/main/includes/cv-caio_mescouto_202304_web.pdf){ .md-button }
 
 

@@ -49,7 +49,7 @@ So the next time someone says Python is slow ask them if they're planning to bui
 
 
 
-[^1]: This site itself is automatically deployed with a GitHub Action Job that triggers whenever something is pushed
+[^1]: This site itself is automatically deployed with a GitHub Action [workflow] that triggers whenever something is pushed
 to the main branch of the repository.
 
 [One of the most popular programming language worldwide]: https://www.tiobe.com/tiobe-index/
@@ -62,3 +62,4 @@ to the main branch of the repository.
 
 [Dropbox]: https://www.techrepublic.com/article/how-to-write-four-million-lines-of-python-lessons-from-dropbox-on-using-the-programming-language-at-scale/
 
+[workflow]: https://github.com/caiomts/caiomts.github.io/blob/main/.github/workflows/ci.yml
