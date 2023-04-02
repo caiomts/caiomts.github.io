@@ -18,7 +18,7 @@ hide: navigation
 
 *Pythonista*, Data Scientist, Data Consultant... :sweat_smile:
 Thus, I've been using Python to solve data related problems. I'm a FOSS enthusiastic and I love well-documented projects, Tests,
-Automations and CI/CD Tools. Everything that makes things reliable, reproducible and maitainable... 
+Automations and CI/CD Tools[^1]. Everything that makes things reliable, reproducible and maitainable... 
 you might have read this before. :man_teacher:
 
 I like to build integrated data solutions, using different data sources and ML. I'm more into tabular or text data problems 
@@ -49,7 +49,8 @@ So the next time someone says Python is slow ask them if they're planning to bui
 
 
 
-
+[^1]: This site itself is automatically deployed with a GitHub Action Job that triggers whenever something is pushed
+to the main branch of the repository.
 
 [One of the most popular programming language worldwide]: https://www.tiobe.com/tiobe-index/
 
