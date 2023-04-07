@@ -5,3 +5,4 @@
 *[NLP]: Natural Language Processing
 *[RPA]: Robotic Process Automation
 *[STEM]: Science, technology, engineering, and mathematics
+*[CLI]: Command-line interface

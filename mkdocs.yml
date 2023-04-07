@@ -2,10 +2,19 @@ site_name: Caio's personal website
 site_url: https://caiomts.github.io/
 site_author: Caio Mescouto Terra de Souza
 
-
 repo_name: /caiomts/caiomts.github.io
 repo_url: https://github.com/caiomts/caiomts.github.io
 edit_uri: edit/main/docs/
+
+nav:
+  - Home: 
+      - index.md
+  - Projects: 
+      - projects.md
+  - Blog: 
+      - python_project.md
+  - Resume: resume.md
+
 
 theme:
   name: material
@@ -78,13 +87,6 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       fallback_to_build_date: true
-
-nav:
-  - Home: index.md
-  - Projects: projects.md
-  - Blog: blog.md
-  - Resume: resume.md
-
 
 extra_css:
   - stylesheets/extra.css
