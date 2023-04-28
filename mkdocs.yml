@@ -12,7 +12,7 @@ nav:
   - Projects: 
       - projects.md
   - Blog: 
-      - python_project.md
+      - blog.md
   - Resume: resume.md
 
 
@@ -84,9 +84,6 @@ extra:
 plugins:
   - search
   - tags
-  - git-revision-date-localized:
-      enable_creation_date: true
-      fallback_to_build_date: true
 
 extra_css:
   - stylesheets/extra.css
