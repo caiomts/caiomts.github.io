@@ -17,14 +17,10 @@ hide: navigation
     [:material-github:](https://github.com/caiomts){ .md-button }
 
 *Pythonista*, Data Scientist, Data Consultant...
-Thus, I've been using Python to solve data related problems. I'm a FOSS enthusiastic and I love well-documented projects, Tests,
-Automations and CI/CD Tools[^1]. Everything that makes things reliable, reproducible and maitainable... 
-you might have read this before.
+I thrive on tackling data-related challenges by leveraging Python. As an enthusiast of FOSS, I love well-documented projects with ample tests, automations and CI/CD Tools[^1] that contribute to the reliability and maintainability of software solutions.
 
-I like to build integrated data solutions, using different data sources and ML. I'm more into tabular or text data problems 
-as I do believe they are somehow more unique and require tailored solutions with a lot of data wrangling, feature engineering and joining forces with subject matter experts. Don't get me wrong, image processing, audio and video are also cool.
-
-Might be important... :man_shrugging_tone1: I hold an MBA in Finance, a Master degree in Finance and Information Technology and I'm an IBM Certified Machine Learning Professional.
+I fancy developing integrated data solutions through a combination of analytics and ML. I'm more into tabular data challenges 
+as I believe they are somewhat more unique and require tailored solutions with a lot of data wrangling, feature engineering and joining forces with subject matter experts.
 
 ## Why Python?
 
