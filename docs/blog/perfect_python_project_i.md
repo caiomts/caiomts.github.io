@@ -9,7 +9,7 @@ tags:
 # Setting Up a Perfect Python Project (part I) <small>2023-05-14</small>
 
 
-There are no formal rules on how to setting up a Python project.However there are a series of guidelines, community standards and a Python tutorial on [Packaging Python Projects](https://packaging.python.org/en/latest/tutorials/packaging-projects/). This is my very opinionated way of setting up a perfect Python project. I try to follow the community standards and the Python tutorial as much as possivel (stands on the shoulders of giants).
+There are no formal rules on how to setting up a Python project. However there are a series of guidelines, community standards and a Python tutorial on [Packaging Python Projects](https://packaging.python.org/en/latest/tutorials/packaging-projects/). This is my very opinionated way of setting up a perfect Python project. I try to follow the community standards and the Python tutorial as much as possivel (stands on the shoulders of giants).
 
 Before get started you need to know a bit about my set up in general.
 I'm running a linux distro based on [Ubuntu](https://ubuntu.com/) and using a Shell[^1] Bash.

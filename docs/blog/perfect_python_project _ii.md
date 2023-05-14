@@ -1,9 +1,9 @@
 ---
-tags:
-  - Projects
-  - Python projects
-  - Bash
-  - GitHub Actions
+#tags:
+#  - Projects
+#  - Python projects
+#  - Bash
+#  - GitHub Actions
 ---
 
 # Setting Up a Perfect Python Project (Part II) <small>2023-05-13</small>
