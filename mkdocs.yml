@@ -11,8 +11,9 @@ nav:
       - index.md
   - Projects: 
       - projects.md
-  - Blog: 
-      - blog.md
+  - Blog:
+      - tags.md
+      - blog/perfect_python_project_i.md
   - Resume: resume.md
 
 
@@ -44,7 +45,6 @@ theme:
     - search.suggest
     - search.share
     - header.autohide
-    - navigation.footer
     - content.action.view
 
 markdown_extensions:
@@ -83,7 +83,8 @@ extra:
 
 plugins:
   - search
-  - tags
+  - tags:
+      tags_file: tags.md
 
 extra_css:
   - stylesheets/extra.css
