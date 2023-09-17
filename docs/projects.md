@@ -20,3 +20,10 @@ Check out the repository:
 [:material-git:](https://github.com/caiomts/jobs_case){ .md-button }
 
 
+## Python Project Template
+
+Simple bash script program to generate the python project template I use.
+
+Check out the repository:
+
+[:material-git:](https://github.com/caiomts/python_project_template){ .md-button }

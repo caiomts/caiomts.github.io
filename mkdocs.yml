@@ -2,9 +2,9 @@ site_name: Caio's personal website
 site_url: https://caiomts.github.io/
 site_author: Caio Mescouto Terra de Souza
 
-repo_name: /caiomts/caiomts.github.io
-repo_url: https://github.com/caiomts/caiomts.github.io
-edit_uri: edit/main/docs/
+#repo_name: /caiomts/caiomts.github.io
+#repo_url: https://github.com/caiomts/caiomts.github.io
+#edit_uri: edit/main/docs/
 
 nav:
   - Home: 
@@ -12,10 +12,7 @@ nav:
   - Projects: 
       - projects.md
   - Blog:
-      - tags.md
-      - blog/perfect_python_project_i.md
-  - Resume: resume.md
-
+    - blog/index.md
 
 theme:
   name: material
@@ -82,9 +79,16 @@ extra:
       name: in/caiomts/
 
 plugins:
+  - tags
   - search
-  - tags:
-      tags_file: tags.md
+  - blog
+  - rss:
+      match_path: blog/posts/.* 
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags 
 
 extra_css:
   - stylesheets/extra.css

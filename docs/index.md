@@ -7,7 +7,7 @@ hide: navigation
 !!! Example inline end "My Tech Stack"
 
     **Languages:** Python, Bash and SQL  
-    **Python workhorses Libraries and Frameworks:** Pandas, Numpy, Matplotlib, Scikit-Learn, 
+    **Python workhorses Libraries and Frameworks:** Pandas, Polars, Numpy, Matplotlib, Scikit-Learn, 
     XGBoost, Panel, Streamlit, Bokeh, Prefect, FastAPI, Typer  
     **Python Tests, Style, Format, Docs, Others:** Pytest, Pytest-Cov, Mkdocs, Black, Flake8, Isort  
     **VCS:** Git  
@@ -16,7 +16,6 @@ hide: navigation
     [:fontawesome-brands-linkedin-in:](https://www.linkedin.com/in/caiomts/){ .md-button }
     [:material-github:](https://github.com/caiomts){ .md-button }
 
-*Pythonista*, Data Scientist, Data Consultant...
 I thrive on tackling data-related challenges by leveraging Python. As an enthusiast of FOSS, I love well-documented projects with ample tests, automations and CI/CD Tools[^1] that contribute to the reliability and maintainability of software solutions.
 
 I fancy developing integrated data solutions through a combination of analytics and ML. I'm more into tabular data challenges 
@@ -27,14 +26,14 @@ as I believe they are somewhat more unique and require tailored solutions with a
 [One of the most popular programming language worldwide].
 It's flexible, the english-ish syntax makes it concise, easy to read and code and, welcoming 
 to first-time coders. As a general purpose language, Python is known as the second best choice
-for solving all kind of programming related problem.
+to solve any kind of problem.
 
 [Python is by far the most used language by data scientists] and has a huge supportive community 
 and endless open source environment which makes it the best choice for any STEM professional with little or 
-no software engineering experience (myself half-included).
+no software engineering experience.
 
-Thanks to python flexibility it's suitable for buiding integrated solutions. Companies have holes between different
-systems and these holes are usually paved by manual and boring work :man_facepalming:. But Python is
+Thanks to python flexibility it's suitable for buiding integrated solutions. Companies have gaps between different
+systems and these gaps are usually paved by manual and boring work :man_facepalming:. But Python is
 perfect for paving them. It works like a glue. You can grant Python access to different databases, make API requests, create RPA solutions and integrate ML on top of that :exploding_head:!
 
 In brief, Python is versitile and beginner-friendly. It's easy and fast for an iterative
