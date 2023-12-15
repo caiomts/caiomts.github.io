@@ -7,3 +7,4 @@
 *[STEM]: Science, technology, engineering, and mathematics
 *[CLI]: Command-line interface
 *[WSL]: The Windows Subsystem for Linux
+*[Pythonista]: a Python enthusiast

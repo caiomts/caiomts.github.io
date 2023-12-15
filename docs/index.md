@@ -1,45 +1,33 @@
 ---
-hide: navigation
+hide: navigation, toc
 ---
 
 # Hi there! I'm Caio :wave:
 
-!!! Example inline end "My Tech Stack"
+My bread and butter is Python and software engineering, as I've been working as Python engineer (I'd rather Pythonista :laughing:) for some time now. I have 8 years of professional experience, half of them dedicated to crunch data challenges.
 
-    **Languages:** Python, Bash and SQL  
-    **Python workhorses Libraries and Frameworks:** Pandas, Polars, Numpy, Matplotlib, Scikit-Learn, 
-    XGBoost, Panel, Streamlit, Bokeh, Prefect, FastAPI, Typer  
-    **Python Tests, Style, Format, Docs, Others:** Pytest, Pytest-Cov, Mkdocs, Black, Flake8, Isort  
-    **VCS:** Git  
-    **CI/CD:** Docker, GitHub Actions, Make  
+I love to study the language and software engineering as a whole. As a Pythonista and a FOSS enthusiast, I'm grateful to all well-documented projects and CI/CD Tools[^1] that make our lives much more fun.
 
-    [:fontawesome-brands-linkedin-in:](https://www.linkedin.com/in/caiomts/){ .md-button }
-    [:material-github:](https://github.com/caiomts){ .md-button }
+You can find out here :point_down::
 
-I thrive on tackling data-related challenges by leveraging Python. As an enthusiast of FOSS, I love well-documented projects with ample tests, automations and CI/CD Tools[^1] that contribute to the reliability and maintainability of software solutions.
+[:fontawesome-brands-linkedin-in:](https://www.linkedin.com/in/caiomts/){ .md-button }
+[:material-github:](https://github.com/caiomts){ .md-button }
 
-I fancy developing integrated data solutions through a combination of analytics and ML. I'm more into tabular data challenges 
-as I believe they are somewhat more unique and require tailored solutions with a lot of data wrangling, feature engineering and joining forces with subject matter experts.
-
-## Why Python?
+## But Why I love Python?
 
 [One of the most popular programming language worldwide].
-It's flexible, the english-ish syntax makes it concise, easy to read and code and, welcoming 
-to first-time coders. As a general purpose language, Python is known as the second best choice
-to solve any kind of problem.
+It's flexible. The english-ish syntax makes it concise, easy to read and code and welcome 
+to newcomers. 
 
 [Python is by far the most used language by data scientists] and has a huge supportive community 
 and endless open source environment which makes it the best choice for any STEM professional with little or 
 no software engineering experience.
 
-Thanks to python flexibility it's suitable for buiding integrated solutions. Companies have gaps between different
-systems and these gaps are usually paved by manual and boring work :man_facepalming:. But Python is
-perfect for paving them. It works like a glue. You can grant Python access to different databases, make API requests, create RPA solutions and integrate ML on top of that :exploding_head:!
+Thanks to python flexibility it's also suitable for buiding integrated solutions. Companies usually have gaps between different systems and these gaps are constantly paved by manual and boring work :man_facepalming:. 
+But Python is perfect for paving them. It works like a glue. You can grant Python access to different databases, make API requests, create RPA solutions and integrate ML on top of that :exploding_head:!
 
-In brief, Python is versitile and beginner-friendly. It's easy and fast for an iterative
-development process, but thanks to its robustness and stability, you can use it from prototyping to production. 
-Python is used by most companies you probably know and is/was part of big projects like [YouTube], [Instagram] and [Dropbox]. 
-So the next time someone says Python is slow ask them if they're planning to build something bigger than these projects :wink:.
+In brief, Python is versitile and beginner-friendly. It's easy and fast for an iterative development process, but thanks to its robustness and stability, you can use it from prototyping to production. 
+
 
 
 
