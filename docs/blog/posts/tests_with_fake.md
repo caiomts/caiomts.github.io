@@ -88,17 +88,19 @@ Let's first implement our test and then we can think about what code we should i
 !!! failure
     The test failed as we can see from the snippet below.
 
-*I decluttered pytest outputs for the sake of simplicity* 
+    ```bash title="bash prompt"
+    $ pytest -vv .
+    ==================================== test session starts ================================
+    # --- omitted for simplicity---
 
-```bash title="bash prompt"
-$ pytest -vv .
-==================================== test session starts ================================
-# --- omitted for simplicity---
+    test_account.py::test_balance_account_increases_when_receive_a_transaction FAILED [100%]
 
-test_account.py::test_balance_account_increases_when_receive_a_transaction FAILED [100%]
+    # --- omitted for simplicity ---
+    ```
 
-# --- omitted for simplicity ---
-```
+    *I decluttered pytest outputs for the sake of simplicity* 
+
+
 Let's code the simplest implementation.
 
 ```python title="account_model.py" hl_lines="9" linenums="3"
@@ -107,15 +109,15 @@ Let's code the simplest implementation.
 !!! success
     And now the test passed.
 
-```bash title="bash prompt"
-$ pytest -vv .
-==================================== test session starts ================================
-# --- omitted for simplicity---
+    ```bash title="bash prompt"
+    $ pytest -vv .
+    ==================================== test session starts ================================
+    # --- omitted for simplicity---
 
-test_account.py::test_balance_account_increases_when_receive_a_transaction PASSED [100%]
+    test_account.py::test_balance_account_increases_when_receive_a_transaction PASSED [100%]
 
-# --- omitted for simplicity ---
-```
+    # --- omitted for simplicity ---
+    ```
 
 But why on earth I highlighted the assertion in the test and the method implementation?
 
@@ -160,22 +162,21 @@ In our case I could wrongly implement:
 ```python title="account_model.py" hl_lines="3" linenums="3"
 --8<-- "code/test_random/account_model_wrong.py:9:11"
 ```
-!!! bug
-    As we can see, when testing using a hardcoded value the test passed, when it should fail as the method implementation is incorrect.
+!!! Failure
+    The test failed but, as we can see, when testing using a hardcoded value the test passed, when it should fail as the method implementation is incorrect.
 
-!!! failure   
     However, when faking values using random the test failed as expected.
 
-```bash
-$ pytest -vv code/test_account.py 
-==================================== test session starts ====================================
-# --- omitted for simplicity---                                                                      
+    ```bash
+    $ pytest -vv code/test_account.py 
+    ==================================== test session starts ====================================
+    # --- omitted for simplicity---                                                                      
 
-code/test_account.py::test_balance_account_increases_when_receive_a_transaction FAILED [ 50%]
-code/test_account.py::test_balance_account_increases_when_receive_a_transaction_assert_4 PASSED [100%]
+    code/test_account.py::test_balance_account_increases_when_receive_a_transaction FAILED [ 50%]
+    code/test_account.py::test_balance_account_increases_when_receive_a_transaction_assert_4 PASSED [100%]
 
-# --- omitted for simplicity---
-```
+    # --- omitted for simplicity---
+    ```
 
 ## The function is so simple. It just implements an equation that we cannot fully test. why should we implement this test in the first place?
 
