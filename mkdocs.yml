@@ -18,14 +18,14 @@ theme:
   name: material
   palette:
     - scheme: default
-      primary: lime
-      accent: deep purple
+      primary: light green
+      accent: indigo
       toggle:
-          icon: material/weather-night 
-          name: Switch to dark mode
+        icon: material/weather-night 
+        name: Switch to dark mode
     - scheme: slate
       primary: light green
-      accent: deep purple
+      accent: indigo
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode  
@@ -34,6 +34,7 @@ theme:
   icon:
     admonition:
       example: octicons/stack-16
+      annotation: material/plus-circle-outline
   features:
     - navigation.tabs
     - navigation.tracking
@@ -43,6 +44,7 @@ theme:
     - search.share
     - header.autohide
     - content.action.view
+    - content.code.annotate
 
 markdown_extensions:
   - pymdownx.emoji:
@@ -52,6 +54,10 @@ markdown_extensions:
   - pymdownx.snippets:
       auto_append:
         - includes/abbreviations.md
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.keys
@@ -64,6 +70,8 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - toc:
       permalink: true
 

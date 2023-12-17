@@ -8,3 +8,4 @@
 *[CLI]: Command-line interface
 *[WSL]: The Windows Subsystem for Linux
 *[Pythonista]: a Python enthusiast
+*[TDD]: Test-driven development

@@ -8,7 +8,7 @@ My bread and butter is Python and software engineering, as I've been working as 
 
 I love to study the language and software engineering as a whole. As a Pythonista and a FOSS enthusiast, I'm grateful to all well-documented projects and CI/CD Tools[^1] that make our lives much more fun.
 
-You can find out here :point_down::
+You can find out more here :point_down::
 
 [:fontawesome-brands-linkedin-in:](https://www.linkedin.com/in/caiomts/){ .md-button }
 [:material-github:](https://github.com/caiomts){ .md-button }
