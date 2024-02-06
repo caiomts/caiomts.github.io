@@ -9,3 +9,6 @@
 *[WSL]: The Windows Subsystem for Linux
 *[Pythonista]: a Python enthusiast
 *[TDD]: Test-driven development
+*[CRUD]: Create, Read, Update and Delete
+*[DB]: Database
+*[UI]: User Interface

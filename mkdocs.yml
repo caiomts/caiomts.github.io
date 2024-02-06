@@ -11,8 +11,6 @@ nav:
       - index.md
   - Projects: 
       - projects.md
-  - Blog:
-    - blog/index.md
 
 theme:
   name: material
@@ -89,7 +87,7 @@ extra:
 plugins:
   - tags
   - search
-  - blog
+  #- blog
   - rss:
       match_path: blog/posts/.* 
       date_from_meta:
